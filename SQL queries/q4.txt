@@ -1,0 +1,14 @@
+When considering total number of items purchased from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
+
+# Calculate total number for accepted
+SELECT SUM(i.quantity_purchased) AS total_items_accepted
+FROM Receipts r
+JOIN Items i ON r.receipt_id = i.receipt_id
+WHERE r.rewardsReceiptStatus = 'ACCEPTED';
+
+    
+# Calculate total number for ‘Rejected’
+SELECT SUM(i.quantity_purchased) AS total_items_rejected
+FROM Receipts r
+JOIN Items i ON r.receipt_id = i.receipt_id
+WHERE r.rewardsReceiptStatus = 'REJECTED';

@@ -1,0 +1,15 @@
+What are the top 5 brands by receipts scanned for most recent month?
+
+WITH RecentReceipts AS (
+    SELECT receipt_id
+    FROM Receipts
+    WHERE purchase_date >= DATE_TRUNC('month', CURRENT_DATE) - INTERVAL '1 month'
+)
+
+SELECT b.name AS brand_name, COUNT(r.receipt_id) AS receipt_count
+FROM RecentReceipts rr
+JOIN Items i ON rr.receipt_id = i.receipt_id
+JOIN Brands b ON i.barcode = b.barcode
+GROUP BY b.name
+ORDER BY receipt_count DESC
+LIMIT 5;

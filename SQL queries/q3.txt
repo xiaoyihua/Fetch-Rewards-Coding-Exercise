@@ -1,0 +1,12 @@
+When considering average spend from receipts with 'rewardsReceiptStatus’ of ‘Accepted’ or ‘Rejected’, which is greater?
+
+# Calculate avg spend of accepted
+SELECT AVG(total_spent) AS average_spend_accepted
+FROM Receipts
+WHERE receipt_status = 'Accepted';
+
+# Calculate avg spend of REJECTED
+SELECT AVG(total_spent) AS average_spend_rejected
+FROM Receipts
+WHERE reciept_stats = 'Rejected';
+
