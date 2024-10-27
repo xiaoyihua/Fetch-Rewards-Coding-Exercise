@@ -1,0 +1,1 @@
+Brands table can be joined with recipts items table on barcode to access that information.
