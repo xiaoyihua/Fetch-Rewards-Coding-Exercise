@@ -1,0 +1,51 @@
+Hello Product Manager, 
+
+I hope you are doing well. As one of the analytics engineers on the team, Ijust wanted to share 
+some of the recent insights I was able to get from the analysis I did on a few of our datasets.
+
+Using Python to explore these datasets for common mistakes, I found that there may be a large problem
+with missing and null values. In some cases we have no data on when points are awarded, what was spent,
+and what was purchased.
+
+Additionally, our data currently seems to be stored in NoSQL, which means that the data is distributed in
+a series of files. This format is not easily convertible to platforms that are commonly used for analysis. 
+Some of the fields in these files have formatting issues as well. If we want to migrate to a structured
+database, we would need to make sure these issues are fixed.
+
+Since there a variety of ways that the structured database could be configured and the data quality remediated,
+I have a few questions:
+
+What are our standards for data completedness? Will the current missing values I've brought up impact
+our customer relations and our teams' ability to resolve disputes?
+
+How are records currently being created and updated? Is there any potential that as our system processes
+more user records, duplicates get generated? How does our system hold up when nulls are being parsed?
+
+Additionally, on the business end, what is our ultimate use case for this data? What would we like to
+accomplish or optimize with this database? Is our priority speed, accuracy, or something else?
+
+To further optimize our data, I'd also like to confer with teams that commonly
+put in data requests or need to access the data to understand their concerns as well.
+
+Finally, as we prepare for scaling, I'd like to know some of our proposed architectures. Are we going to continue
+with NoSQL? If so, that would change our approach going forward a lot. Otherwise, we would also need
+to consider various structured database providers.
+
+Additionally, what cloud provider will we be using? Depending on our use cases, one may be easier to migrate
+to than the other. If our company is already on a certain platform, we may want to standardize everything 
+to that platform as well.
+
+Also, if users and requests grow, we would definitely want to do larger scale analysis. In this case, 
+parallel processing tools like Spark could make a difference, especially when it comes to speed. However,
+before we even get to that point we really need to make sure that our data is bulletproof when it comes to quality.
+If not, a system that runs into edge cases and errors all the time is the thing that would come out of it.
+We should consider limiting some of the free fields in our data entry process. We should also review any 
+machine learning algorithms we are using to make sure that they have a low rate of hallucination, and even if they do,
+they are submitting structured, valid data.
+
+Hopefully, this gives a better picture of the state of our data at the time. I'm open to discussion on any
+of the points that I've raised, and I'm looking forward to working with you on these challenges.
+
+Best,
+
+Daniel
